@@ -85,6 +85,24 @@ BoltRPC provides dedicated HTTPS and WebSocket RPC endpoints for Ink, operated b
 <br />
 <br />
 
+## Compare provider plans
+
+[Chain.Love](https://ink.chain.love/toolbox/apis) is a community-maintained
+directory for comparing provider plans for Ink. Use it to find provider
+documentation, plan limits, and network labels before choosing an RPC service.
+Confirm current Ink support and pricing with the provider before integrating.
+
+For example, you can search the public directory for Alchemy without an API key:
+
+```bash
+curl --fail --silent --show-error \
+  'https://ink.chain.love/api/infrastructure-providers/rows?category=apis&search=Alchemy&page=1&pageSize=10'
+```
+
+The response contains provider metadata in `result.rows`, with separate `chain`
+labels for mainnet and testnet. This is a directory lookup, not an RPC endpoint;
+use the provider documentation in `actionButtons` to set up your connection.
+
 ## Public Endpoints
 
 To connect to Ink Sepolia or Ink Mainnet, you can select from multiple RPC providers, each offering reliable infrastructure with unique features and capabilities.
